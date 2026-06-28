@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var TOTAL = 181;
+  var TOTAL = 161;
   var BASE = "assets/media/hero-seq/frame_";
   var pad = function (n) { return ("000" + n).slice(-3); };
   var srcOf = function (i) { return BASE + pad(i) + ".jpg"; };
@@ -51,7 +51,7 @@
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
-  /* ---------- draw one frame (contain, centered) ---------- */
+  /* ---------- draw one frame (cover, fills viewport) ---------- */
   function paint(idx) {
     idx = Math.max(1, Math.min(TOTAL, idx));
     var img = images[idx];
@@ -59,8 +59,8 @@
     current = idx;
     var cw = canvas.clientWidth, ch = canvas.clientHeight;
     var iw = img.naturalWidth, ih = img.naturalHeight;
-    // contain with a slight upscale bias so the figure reads large
-    var scale = Math.min(cw / iw, ch / ih) * 1.06;
+    // cover: fill the viewport, crop overflow (cinematic full-bleed)
+    var scale = Math.max(cw / iw, ch / ih);
     var dw = iw * scale, dh = ih * scale;
     var dx = (cw - dw) / 2, dy = (ch - dh) / 2;
     ctx.clearRect(0, 0, cw, ch);
@@ -70,7 +70,7 @@
   /* ---------- messages ---------- */
   var msgs = Array.prototype.slice.call(document.querySelectorAll("[data-range]"));
   var cue = document.querySelector(".hero__cue");
-  var finalCta = document.querySelector(".hero__cta-final");
+  var finale = document.querySelector(".hero-finale");
 
   // smooth fade with ease-in/out inside a [start,end] window
   function windowOpacity(p, start, end) {
@@ -97,12 +97,16 @@
       el.style.transform = "translateY(" + rise + "px)";
     }
     if (cue) cue.style.opacity = (p < 0.04 ? 1 : Math.max(0, 1 - p * 12)).toFixed(3);
-    if (finalCta) {
-      var fo = windowOpacity(p, 0.9, 1.0001);
-      // keep CTA fully visible once revealed at the very end
-      if (p >= 0.96) fo = 1;
-      finalCta.style.opacity = fo.toFixed(3);
-      finalCta.classList.toggle("is-live", fo > 0.6);
+    if (finale) {
+      // doors open over the last stretch — fade the statement in and keep it
+      var fo;
+      if (p < 0.8) fo = 0;
+      else fo = Math.min(1, (p - 0.8) / 0.14);
+      finale.style.opacity = fo.toFixed(3);
+      // gentle scale-up as it settles in
+      var sc = 1 + (1 - fo) * 0.06;
+      finale.style.transform = "scale(" + sc.toFixed(4) + ")";
+      finale.classList.toggle("is-live", fo > 0.6);
     }
   }
 

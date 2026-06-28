@@ -1,20 +1,18 @@
 # House of AS
 
-Boutique e-commerce **old money** pour homme — vêtements et accessoires (lunettes,
-portefeuilles, coques, bijoux). Thème studio gris, direction artistique sobre et
-intemporelle.
+Maison de mode masculine — vêtements, lunettes et maroquinerie d'exception.
+Direction artistique **terre / brun chaud**, style moderne et éditorial.
 
 ## La landing page
 
-La page d'accueil ouvre sur un **hero piloté au défilement** : une séquence d'images
-(extraite de la vidéo de campagne) où le mannequin **s'habille progressivement** au
-fur et à mesure que l'on scrolle, avec des messages éditoriaux qui apparaissent en
-fondu à chaque étape de la tenue.
+La page d'accueil ouvre sur un **hero cinématographique piloté au défilement** :
+une séquence d'images (extraite de la vidéo) qui **avance vers la boutique** et,
+en fin de défilement, **les portes s'ouvrent** sur un texte géant de bienvenue.
 
-- Rendu via `<canvas>` + séquence d'images préchargées (fluide, fiable sur mobile).
-- Animation au scroll avec **GSAP ScrollTrigger**, et un **fallback scroll natif**
-  si GSAP n'est pas disponible.
-- Bords adoucis (CSS `mask`) pour fondre la figure dans le fond gris studio.
+- Rendu via `<canvas>` plein cadre (`cover`) + séquence d'images préchargées.
+- **Filtre sombre** (scrim dégradé + vignette) pour tamiser la scène.
+- Messages éditoriaux en fondu, puis **statement géant à l'ouverture des portes**.
+- Animation au scroll avec **GSAP ScrollTrigger**, **fallback scroll natif**.
 - Respecte `prefers-reduced-motion` (composition statique de repli).
 
 ## Structure
@@ -28,8 +26,8 @@ assets/
   css/style.css       Design system (thème gris, tokens OKLCH, typographie)
   js/hero-scroll.js   Moteur du hero (canvas + séquence + messages)
   js/main.js          Nav, reveals au scroll, panier, newsletter
-  media/hero-seq/     181 frames de la séquence d'habillage
-  img/                Visuels éditoriaux de campagne
+  media/hero-seq/     161 frames de la séquence (avancée vers les portes)
+  img/                Photos produits + plans éditoriaux (devanture, intérieur)
 ```
 
 ## Lancer en local
@@ -44,9 +42,9 @@ python3 -m http.server 8000
 
 ## Direction artistique
 
-- **Palette** : gris studio, crème, espresso (lin), cuir tan, laiton sourd.
-- **Typographie** : Cormorant Garamond (display serif) + Jost (sans géométrique).
-- **Ton** : luxe discret, sans logo ni tapage — « l'élégance ne se crie pas ».
+- **Palette** : terre / brun chaud — sable, camel, terracotta, espresso, crème.
+- **Typographie** : Archivo (grotesk display) + Inter (UI) + Instrument Serif (accents).
+- **Ton** : maison de mode moderne — matières rares, séries courtes, sans tapage.
 
 ## Pistes d'évolution
 

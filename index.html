@@ -3,201 +3,205 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>House of AS — Le vestiaire de l'homme discret</title>
-<meta name="description" content="House of AS — vêtements et accessoires masculins de style old money. Maille de coton, lin lavé, cuir patiné. Une garde-robe pensée pour durer." />
-<meta name="theme-color" content="#8f9193" />
+<title>House of AS — La maison du vestiaire masculin</title>
+<meta name="description" content="House of AS — maison de mode masculine. Vêtements, lunettes et maroquinerie d'exception. Poussez la porte." />
+<meta name="theme-color" content="#1c140f" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="preload" as="image" href="assets/media/hero-seq/frame_001.jpg" />
 </head>
 <body>
 
-<!-- ============ LOADER ============ -->
+<!-- LOADER -->
 <div class="loader" aria-hidden="true">
   <div class="loader__inner">
-    <div class="loader__brand">House of AS<small>Paris</small></div>
+    <div class="loader__brand">House of AS</div>
     <div class="loader__track"><div class="loader__bar"></div></div>
     <div class="loader__pct">0 %</div>
   </div>
 </div>
 
-<!-- ============ NAV ============ -->
+<!-- NAV -->
 <header class="nav" id="top">
-  <a class="nav__brand" href="#top">House of AS<small>Maison · Paris</small></a>
+  <a class="nav__brand" href="#top">House of AS</a>
   <nav class="nav__links" aria-label="Principal">
-    <a class="link-underline" href="#vetements">Vêtements</a>
-    <a class="link-underline" href="#accessoires">Accessoires</a>
+    <a class="link-underline" href="#vestiaire">Vestiaire</a>
+    <a class="link-underline" href="#categories">Catégories</a>
     <a class="link-underline" href="#maison">La Maison</a>
-    <a class="link-underline" href="#cercle">Le Cercle</a>
+    <a class="link-underline" href="#cercle">Contact</a>
   </nav>
   <div class="nav__right">
     <a class="link-underline" href="collection.html">Boutique</a>
-    <button class="nav__cart" data-open-cart aria-label="Ouvrir le panier">
-      Panier <span class="count">0</span>
-    </button>
+    <button class="nav__cart" data-open-cart aria-label="Ouvrir le panier">Panier <span class="count">0</span></button>
     <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<!-- ============ HERO (scroll dressing) ============ -->
-<section class="hero" id="hero" aria-label="Le mannequin s'habille au fil du défilement">
+<!-- HERO : push to the doors -->
+<section class="hero" id="hero" aria-label="Entrée dans la maison House of AS">
   <div class="hero__stage">
     <canvas class="hero__canvas"></canvas>
+    <div class="hero__scrim"></div>
 
     <div class="hero__messages">
-      <div class="hero-msg hero-msg--top" data-range="0.02,0.18">
-        <span class="k">House of AS</span>
-        <h1 class="t">L'élégance <em>ne se crie pas.</em></h1>
-        <p class="s">Elle se devine, pièce après pièce.</p>
+      <div class="hero-msg hero-msg--top" data-range="0.05,0.24">
+        <span class="k">Maison — New York</span>
+        <h1 class="t">Le luxe ne se visite pas,<br><span class="serif-em">il se vit.</span></h1>
       </div>
-
-      <div class="hero-msg hero-brand" data-range="0.24,0.43" style="top:50%; transform:translateY(-50%);">
-        <h2 class="t">House&nbsp;of&nbsp;AS<small>Le vestiaire de l'homme discret</small></h2>
-      </div>
-
-      <div class="hero-msg hero-msg--bottom" data-range="0.47,0.63">
-        <h2 class="t">Old money. <em>Allure héritée.</em></h2>
-        <p class="s">Maille de coton · lin lavé · cuir patiné.</p>
-      </div>
-
-      <div class="hero-msg hero-msg--bottom" data-range="0.67,0.83">
-        <h2 class="t">Chaque pièce <em>se transmet.</em></h2>
-        <p class="s">Pensée pour durer plus longtemps qu'une saison.</p>
+      <div class="hero-msg hero-msg--bottom" data-range="0.42,0.66">
+        <h2 class="t">Poussez la porte.</h2>
+        <p class="s">Ce qui vous attend de l'autre côté n'a pas de prix affiché par hasard.</p>
       </div>
     </div>
 
-    <div class="hero__cta-final">
-      <a class="btn btn--light" href="#vetements">Découvrir la collection <span class="arrow">→</span></a>
+    <!-- doors open : oversized statement -->
+    <div class="hero-finale">
+      <div>
+        <p class="big">Bienvenue<span class="serif-em">chez House of AS</span></p>
+        <p class="sub">La nouvelle maison du vestiaire masculin</p>
+        <div class="cta"><a class="btn btn--light" href="#vestiaire">Entrer dans la boutique <span class="arrow">→</span></a></div>
+      </div>
     </div>
 
     <div class="hero__cue"><span>Défilez</span><span class="bar"></span></div>
   </div>
 </section>
 
-<!-- ============ MANIFESTO ============ -->
-<section class="section manifesto" id="maison">
-  <div class="wrap">
-    <p class="eyebrow reveal">Le manifeste</p>
-    <h2 class="display reveal" data-d="1">Une garde-robe qui ne cherche pas à <em>impressionner</em> — seulement à durer.</h2>
-    <p class="lede reveal" data-d="2">House of AS habille l'homme qui n'a rien à prouver. Des matières nobles, des coupes justes, des teintes sourdes. Le luxe discret du vrai, loin des logos et du tapage.</p>
-    <div class="rule reveal" data-d="3"></div>
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__row">
+    <span>Maille italienne</span><span>Lin lavé</span><span>Maroquinerie d'exception</span><span>Lunettes façonnées main</span><span>Édition limitée</span>
+    <span>Maille italienne</span><span>Lin lavé</span><span>Maroquinerie d'exception</span><span>Lunettes façonnées main</span><span>Édition limitée</span>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="section intro" id="maison">
+  <div class="wrap intro__grid">
+    <p class="eyebrow reveal">[ La maison ]</p>
+    <h2 class="reveal" data-d="1">Une garde-robe d'<span class="serif-em">exception</span>, sans le tapage.</h2>
+    <div class="intro__foot">
+      <p class="lede reveal" data-d="2">House of AS habille l'homme qui sait. Des matières rares, des pièces choisies, une exigence qui ne se voit qu'à l'usage. Pas de logo criard — seulement le bon goût, porté.</p>
+      <a class="btn btn--ghost reveal" data-d="3" href="#vestiaire">Voir le vestiaire <span class="arrow">→</span></a>
+    </div>
   </div>
 </section>
 
-<!-- ============ COLLECTIONS ============ -->
-<section class="section" id="vetements" style="background:var(--stone-200)">
+<!-- PRODUCTS -->
+<section class="section products" id="vestiaire">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow reveal">Campagne · Le vestiaire essentiel</p>
-        <h2 class="display reveal" data-d="1">Vêtements</h2>
+        <p class="eyebrow reveal">[ Sélection ]</p>
+        <h2 class="display reveal" data-d="1">Le vestiaire</h2>
       </div>
-      <p class="reveal" data-d="2">Quelques pièces, choisies pour se porter ensemble — du matin au soir, d'une année à l'autre.</p>
+      <p class="reveal" data-d="2">Quatre pièces inaugurales. Choisies pour se porter ensemble, pensées pour rester.</p>
     </div>
 
-    <div class="coll-grid">
-      <a class="coll coll--tall reveal" href="collection.html">
-        <img src="assets/img/editorial-final.jpg" alt="Tenue complète old money : polo en maille et pantalon en lin" loading="lazy" />
-        <div class="coll__body">
-          <p class="name">La Maille</p>
-          <div class="meta"><span>Polos & pulls en coton</span><span>Dès 180 €</span></div>
-        </div>
+    <div class="product-grid">
+      <a class="product reveal" href="product.html">
+        <div class="product__media"><span class="product__badge product__badge--terra">Signature</span><img src="assets/img/polo.jpg" alt="Polo en maille crème" loading="lazy" /></div>
+        <div class="product__info"><div><div class="nm">Polo en maille</div><div class="ct">Coton · Crème</div></div><div class="pr">180 €</div></div>
       </a>
 
-      <div style="grid-column:span 6; display:grid; gap:clamp(0.8rem,1.4vw,1.4rem);">
-        <a class="coll coll--wide reveal" data-d="1" href="collection.html" style="min-height:0; flex:1;">
-          <img src="assets/img/editorial-mid.jpg" alt="Pantalon en lin lavé porté avec un polo crème" loading="lazy" />
-          <div class="coll__body">
-            <p class="name">Le Pantalon</p>
-            <div class="meta"><span>Lin lavé & laine fraîche</span><span>Dès 210 €</span></div>
-          </div>
-        </a>
-        <a class="coll coll--wide reveal" data-d="2" href="collection.html" style="min-height:0; flex:1;">
-          <img src="assets/img/editorial-detail.jpg" alt="Détail d'une tenue tailleur décontractée" loading="lazy" />
-          <div class="coll__body">
-            <p class="name">Le Tailoring</p>
-            <div class="meta"><span>Vestes non doublées</span><span>Dès 340 €</span></div>
-          </div>
-        </a>
-      </div>
+      <a class="product reveal" data-d="1" href="product.html">
+        <div class="product__media"><img src="assets/img/trousers.jpg" alt="Pantalon en lin brun foncé" loading="lazy" /></div>
+        <div class="product__info"><div><div class="nm">Pantalon en lin</div><div class="ct">Lin lavé · Espresso</div></div><div class="pr">210 €</div></div>
+      </a>
+
+      <a class="product reveal" data-d="2" href="product.html">
+        <div class="product__media"><img src="assets/img/sunglasses.jpg" alt="Lunettes de soleil acétate dégradé" loading="lazy" /></div>
+        <div class="product__info"><div><div class="nm">Lunettes solaires</div><div class="ct">Acétate · Fumé brun</div></div><div class="pr">190 €</div></div>
+      </a>
+
+      <a class="product reveal" data-d="3" href="product.html">
+        <div class="product__media"><span class="product__badge">Pièce rare</span><img src="assets/img/wallet.jpg" alt="Porte-cartes en toile enduite" loading="lazy" /></div>
+        <div class="product__info"><div><div class="nm">Porte-cartes</div><div class="ct">Toile enduite · Marine</div></div><div class="pr">390 €</div></div>
+      </a>
+
+      <a class="product reveal" href="collection.html">
+        <div class="product__media"><div class="product__ph">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M17 8l7 4 7-4 7 6-4 4v22H14V18l-4-4z"/><path d="M24 12v28"/></svg>
+          <span class="lbl">Chemise en lin</span><span class="tiny">Bientôt</span>
+        </div></div>
+        <div class="product__info"><div><div class="nm">Chemise en lin</div><div class="ct">Prochaine livraison</div></div><div class="pr">—</div></div>
+      </a>
+
+      <a class="product reveal" data-d="1" href="collection.html">
+        <div class="product__media"><div class="product__ph">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="27" r="11"/><path d="M24 16V9m-5 0h10"/></svg>
+          <span class="lbl">Chevalière</span><span class="tiny">Bientôt</span>
+        </div></div>
+        <div class="product__info"><div><div class="nm">Chevalière</div><div class="ct">Prochaine livraison</div></div><div class="pr">—</div></div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ============ EDITORIAL SPLIT ============ -->
-<section class="section editorial">
-  <div class="wrap editorial__grid">
-    <div class="editorial__body reveal">
-      <p class="eyebrow">L'art du vestiaire</p>
-      <h2 class="display">Cinq pièces. <em>Mille</em> tenues.</h2>
-      <p class="lede">On ne s'habille pas en accumulant. On s'habille en choisissant bien. Voici la méthode House of AS.</p>
-      <ul class="editorial__list">
-        <li><span class="n">01</span><span class="x"><strong>La maille crème</strong><span>Le polo en coton qui remplace dix t-shirts.</span></span></li>
-        <li><span class="n">02</span><span class="x"><strong>Le pantalon brun</strong><span>Lin lavé, taille élastiquée invisible, tombé net.</span></span></li>
-        <li><span class="n">03</span><span class="x"><strong>Le cuir patiné</strong><span>Sandales, ceinture, portefeuille — une seule couleur.</span></span></li>
-        <li><span class="n">04</span><span class="x"><strong>Les teintes sourdes</strong><span>Crème, taupe, espresso, gris. Rien qui jure.</span></span></li>
-        <li><span class="n">05</span><span class="x"><strong>Le détail juste</strong><span>Des lunettes, une chevalière. Le reste se tait.</span></span></li>
-      </ul>
-      <a class="btn btn--ghost" href="collection.html">Voir le lookbook <span class="arrow">→</span></a>
-    </div>
-    <div class="editorial__img reveal" data-d="1">
-      <img src="assets/img/editorial-final.jpg" alt="Homme en tenue old money complète sur fond gris" loading="lazy" />
-      <span class="tag">Campagne — Été</span>
-    </div>
+<!-- FEATURE full-bleed : storefront -->
+<section class="feature">
+  <img src="assets/img/storefront.jpg" alt="Devanture de la boutique House of AS à New York" loading="lazy" />
+  <div class="feature__body reveal">
+    <p class="eyebrow" style="color:var(--camel)">[ L'adresse ]</p>
+    <h2 class="display">Une maison,<br><span class="serif-em">pas une boutique.</span></h2>
+    <p>Derrière la façade de pierre, un écrin de bois et de cuir où chaque pièce est présentée comme elle mérite de l'être. La même attention, en ligne.</p>
+    <a class="btn btn--light" href="#categories">Découvrir les catégories <span class="arrow">→</span></a>
   </div>
 </section>
 
-<!-- ============ ACCESSOIRES ============ -->
-<section class="section acc" id="accessoires">
+<!-- CATEGORIES bento -->
+<section class="section bento" id="categories">
   <div class="wrap">
     <div class="section-head">
-      <div>
-        <p class="eyebrow reveal">Les détails</p>
-        <h2 class="display reveal" data-d="1">Accessoires</h2>
-      </div>
-      <p class="reveal" data-d="2">Ce qui distingue, sans jamais s'imposer. Cuir, acétate et métaux nobles.</p>
+      <div><p class="eyebrow reveal">[ Catégories ]</p><h2 class="display reveal" data-d="1">Explorer</h2></div>
+      <p class="reveal" data-d="2">Du prêt-à-porter aux pièces de maroquinerie, tout le vestiaire en un regard.</p>
     </div>
-
-    <div class="acc-grid">
-      <article class="acc-card reveal">
-        <svg class="ico" viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="14" r="7"/><circle cx="36" cy="14" r="7"/><path d="M19 13h10M2 11l3-2M46 11l-3-2"/></svg>
-        <p class="name">Lunettes</p>
-        <p class="desc">Acétate italien, verres minéraux. Des montures sobres qui traversent les décennies.</p>
-        <a class="more" href="collection.html">Explorer →</a>
-      </article>
-
-      <article class="acc-card reveal" data-d="1">
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="8" y="14" width="32" height="22" rx="3"/><path d="M8 20h32M30 26h6"/><path d="M12 14V11a3 3 0 0 1 3-3h18"/></svg>
-        <p class="name">Portefeuilles</p>
-        <p class="desc">Cuir pleine fleur à tannage végétal, qui se patine avec les années comme il se doit.</p>
-        <a class="more" href="collection.html">Explorer →</a>
-      </article>
-
-      <article class="acc-card reveal" data-d="2">
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="15" y="6" width="18" height="36" rx="4"/><path d="M21 10h6"/><circle cx="24" cy="36" r="1.4" fill="currentColor" stroke="none"/></svg>
-        <p class="name">Coques</p>
-        <p class="desc">Étuis en cuir façonnés à la main pour chaque modèle. La technologie, enfin habillée.</p>
-        <a class="more" href="collection.html">Explorer →</a>
-      </article>
-
-      <article class="acc-card reveal" data-d="3">
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="24" cy="27" r="11"/><path d="M24 16V9m-5 0h10"/><path d="M24 22l2.2 3.6L30 26l-2.8 2.4.7 4-3.9-2-3.9 2 .7-4L18 26l3.8-.4z"/></svg>
-        <p class="name">Bijoux</p>
-        <p class="desc">Chevalières et gourmettes en argent massif et or jaune. Discrets, jamais ostentatoires.</p>
-        <a class="more" href="collection.html">Explorer →</a>
-      </article>
+    <div class="bento-grid reveal">
+      <a class="cat cat--a" href="collection.html">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 8l7 4 7-4 7 6-4 4v22H14V18l-4-4z"/></svg>
+        <div class="name">Prêt-à-porter</div><div class="more">Polos · Pantalons · Chemises →</div>
+      </a>
+      <a class="cat cat--b" href="collection.html">
+        <svg class="ico" viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="13" r="7"/><circle cx="36" cy="13" r="7"/><path d="M19 12h10M2 10l3-2M46 10l-3-2"/></svg>
+        <div class="name">Lunettes</div><div class="more">Solaires & optiques →</div>
+      </a>
+      <a class="cat cat--c" href="collection.html">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="9" y="15" width="30" height="20" rx="3"/><path d="M9 21h30M29 26h6"/><path d="M13 15v-3a3 3 0 0 1 3-3h17"/></svg>
+        <div class="name">Maroquinerie</div><div class="more">Porte-cartes · Portefeuilles →</div>
+      </a>
+      <a class="cat cat--d" href="collection.html">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="24" cy="27" r="11"/><path d="M24 16V9m-5 0h10"/></svg>
+        <div class="name">Bijoux</div><div class="more">Argent & or →</div>
+      </a>
+      <a class="cat cat--e" href="collection.html">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M10 24h28M24 10v28" /><circle cx="24" cy="24" r="15"/></svg>
+        <div class="name">Sur-mesure</div><div class="more">Sur rendez-vous →</div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ============ LE CERCLE (newsletter) ============ -->
+<!-- VALUES -->
+<section class="section values">
+  <div class="wrap">
+    <p class="eyebrow reveal" style="color:var(--camel)">[ Notre exigence ]</p>
+    <h2 class="display reveal" data-d="1" style="font-size:clamp(2rem,5vw,3.6rem);max-width:18ch;margin-top:1rem">Trois promesses, tenues à chaque commande.</h2>
+    <div class="values-grid">
+      <div class="value reveal"><span class="n">01</span><h3>Matières rares</h3><p>Maille italienne, lin lavé, toiles enduites et acétates façonnés. On choisit la matière avant le prix.</p></div>
+      <div class="value reveal" data-d="1"><span class="n">02</span><h3>Séries courtes</h3><p>Peu de pièces, jamais rééditées à l'identique. Ce que vous portez, peu de monde le porte.</p></div>
+      <div class="value reveal" data-d="2"><span class="n">03</span><h3>Service de maison</h3><p>Livraison soignée, retours simples, conseil personnel. L'attention d'une boutique, partout.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
 <section class="section cercle" id="cercle">
   <div class="wrap">
-    <p class="eyebrow reveal">Sur invitation</p>
-    <h2 class="display reveal" data-d="1">Entrez dans <em>le Cercle.</em></h2>
-    <p class="reveal" data-d="2">Accès anticipé aux pièces, éditions confidentielles et conseils de style. Aucune offre tapageuse — seulement l'essentiel, deux fois par mois.</p>
+    <p class="eyebrow reveal">[ Sur invitation ]</p>
+    <h2 class="display reveal" data-d="1">Entrez dans <span class="serif-em">le cercle.</span></h2>
+    <p class="reveal" data-d="2">Accès anticipé aux pièces, éditions confidentielles et invitations privées. Deux fois par mois, jamais plus.</p>
     <form class="reveal" data-d="3" novalidate>
       <input type="email" inputmode="email" placeholder="Votre adresse e-mail" aria-label="Adresse e-mail" required />
       <button class="btn btn--light" type="submit">Rejoindre <span class="arrow">→</span></button>
@@ -206,63 +210,29 @@
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
+<!-- FOOTER -->
 <footer class="foot">
   <div class="wrap">
+    <div class="foot__big">House of AS</div>
     <div class="foot__top">
       <div>
-        <div class="foot__brand">House of AS<small>Maison · Paris</small></div>
-        <p class="blurb">Vêtements et accessoires masculins de style old money. Pensés pour durer, faits pour se transmettre.</p>
+        <p class="blurb">La maison du vestiaire masculin. Vêtements, lunettes et maroquinerie d'exception — pensés pour durer, faits pour se transmettre.</p>
       </div>
-      <div>
-        <h4>Boutique</h4>
-        <ul>
-          <li><a href="collection.html">Vêtements</a></li>
-          <li><a href="collection.html">Accessoires</a></li>
-          <li><a href="collection.html">Lookbook</a></li>
-          <li><a href="collection.html">Cartes cadeaux</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>La Maison</h4>
-        <ul>
-          <li><a href="#maison">Notre histoire</a></li>
-          <li><a href="#maison">Matières & ateliers</a></li>
-          <li><a href="#maison">Durabilité</a></li>
-          <li><a href="#cercle">Le Cercle</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Service</h4>
-        <ul>
-          <li><a href="#">Livraison & retours</a></li>
-          <li><a href="#">Guide des tailles</a></li>
-          <li><a href="#">Nous contacter</a></li>
-          <li><a href="#">Suivi de commande</a></li>
-        </ul>
-      </div>
+      <div><h4>Boutique</h4><ul><li><a href="collection.html">Vestiaire</a></li><li><a href="collection.html">Lunettes</a></li><li><a href="collection.html">Maroquinerie</a></li><li><a href="collection.html">Sur-mesure</a></li></ul></div>
+      <div><h4>La Maison</h4><ul><li><a href="#maison">Notre histoire</a></li><li><a href="#maison">Matières</a></li><li><a href="#categories">Catégories</a></li><li><a href="#cercle">Le Cercle</a></li></ul></div>
+      <div><h4>Service</h4><ul><li><a href="#">Livraison & retours</a></li><li><a href="#">Guide des tailles</a></li><li><a href="#">Nous contacter</a></li><li><a href="#">Suivi de commande</a></li></ul></div>
     </div>
-    <div class="foot__bottom">
-      <span>© <span data-year>2026</span> House of AS — Tous droits réservés.</span>
-      <span>Paris · Livraison dans le monde entier</span>
-    </div>
+    <div class="foot__bottom"><span>© <span data-year>2026</span> House of AS — Tous droits réservés.</span><span>New York · Paris · Livraison mondiale</span></div>
   </div>
 </footer>
 
-<!-- ============ CART DRAWER ============ -->
+<!-- CART DRAWER -->
 <div class="drawer-backdrop" data-close-cart></div>
 <aside class="drawer" aria-label="Panier">
-  <div class="drawer__head">
-    <h3>Votre panier</h3>
-    <button class="drawer__close" data-close-cart aria-label="Fermer">×</button>
-  </div>
-  <div class="drawer__empty">
-    <p>Votre panier est encore vide.</p>
-    <a class="btn btn--ghost" href="collection.html" data-close-cart>Parcourir la boutique</a>
-  </div>
+  <div class="drawer__head"><h3>Votre panier</h3><button class="drawer__close" data-close-cart aria-label="Fermer">×</button></div>
+  <div class="drawer__empty"><p>Votre panier est encore vide.</p><a class="btn btn--ghost" href="collection.html" data-close-cart>Parcourir la boutique</a></div>
 </aside>
 
-<!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="assets/js/hero-scroll.js"></script>
