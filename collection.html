@@ -3,23 +3,25 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Boutique — House of AS</title>
-<meta name="description" content="La boutique House of AS : vêtements, lunettes et maroquinerie d'exception pour homme." />
-<meta name="theme-color" content="#1c140f" />
+<title>La Boutique — The Eyes Chico</title>
+<meta name="description" content="L'Édition N°1 « Premier Regard » — le vestiaire The Eyes Chico. Le regard ne ment jamais." />
+<meta name="theme-color" content="#224233" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
 <header class="nav is-solid" id="top">
-  <a class="nav__brand" href="index.html">House of AS</a>
+  <a class="nav__brand" href="index.html" aria-label="The Eyes Chico — accueil">
+    <svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M28 66 Q92 108 156 66"/><path d="M28 66 Q92 24 156 66 Q184 55 214 30"/><circle cx="92" cy="65" r="27"/><circle cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/><g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/><path d="M0 0 C3.4 -3 9 -3 12 0 C9 3 3.4 3 0 0Z" transform="translate(206,33) rotate(-40)"/></g></svg>
+    <span class="wm">The Eyes Chico</span>
+  </a>
   <nav class="nav__links" aria-label="Principal">
-    <a class="link-underline" href="collection.html">Vestiaire</a>
-    <a class="link-underline" href="index.html#categories">Catégories</a>
+    <a class="link-underline" href="collection.html">L'Édition</a>
     <a class="link-underline" href="index.html#maison">La Maison</a>
-    <a class="link-underline" href="index.html#cercle">Contact</a>
+    <a class="link-underline" href="index.html#cercle">Le Cercle</a>
   </nav>
   <div class="nav__right">
     <a class="link-underline" href="index.html">Accueil</a>
@@ -30,14 +32,15 @@
 
 <section class="page-head">
   <div class="wrap">
-    <p class="eyebrow">La boutique</p>
-    <h1 class="display">Le vestiaire</h1>
-    <p>Une sélection resserrée, conçue pour se combiner. Chaque pièce existe parce qu'elle manquait.</p>
+    <p class="eyebrow eyebrow--or">Édition N°1 — Premier Regard</p>
+    <h1 class="display">Le Vestiaire</h1>
+    <span class="latin">Oculi numquam mentiuntur</span>
   </div>
 </section>
 
 <div class="filters">
   <button class="active" data-filter="all">Tout</button>
+  <button data-filter="lunettes">Lunettes</button>
   <button data-filter="vetements">Vêtements</button>
   <button data-filter="accessoires">Accessoires</button>
 </div>
@@ -46,44 +49,34 @@
   <div class="wrap">
     <div class="product-grid">
 
-      <a class="product reveal" data-cat="vetements" href="product.html">
-        <div class="product__media"><span class="product__badge product__badge--terra">Signature</span><img src="assets/img/polo.jpg" alt="Polo en maille crème" loading="lazy" /></div>
-        <div class="product__info"><div><div class="nm">Polo en maille</div><div class="ct">Coton · Crème</div></div><div class="pr">180 €</div></div>
+      <a class="product reveal" data-cat="lunettes" href="product.html">
+        <div class="product__media"><span class="product__badge product__badge--or">Signature</span><img src="assets/img/sunglasses.jpg" alt="Solaires Le Regard" loading="lazy" /></div>
+        <div class="product__info"><div class="nm">Les Solaires « Le Regard »</div><div class="ct">Acétate façonné · fumé brun</div><div class="pr">145 €</div></div>
       </a>
 
       <a class="product reveal" data-cat="vetements" href="product.html">
-        <div class="product__media"><img src="assets/img/trousers.jpg" alt="Pantalon en lin espresso" loading="lazy" /></div>
-        <div class="product__info"><div><div class="nm">Pantalon en lin</div><div class="ct">Lin lavé · Espresso</div></div><div class="pr">210 €</div></div>
-      </a>
-
-      <a class="product reveal" data-cat="accessoires" href="product.html">
-        <div class="product__media"><img src="assets/img/sunglasses.jpg" alt="Lunettes de soleil acétate" loading="lazy" /></div>
-        <div class="product__info"><div><div class="nm">Lunettes solaires</div><div class="ct">Acétate · Fumé brun</div></div><div class="pr">190 €</div></div>
-      </a>
-
-      <a class="product reveal" data-cat="accessoires" href="product.html">
-        <div class="product__media"><span class="product__badge">Pièce rare</span><img src="assets/img/wallet.jpg" alt="Porte-cartes toile enduite marine" loading="lazy" /></div>
-        <div class="product__info"><div><div class="nm">Porte-cartes</div><div class="ct">Toile enduite · Marine</div></div><div class="pr">390 €</div></div>
+        <div class="product__media"><span class="product__badge">Le Court</span><img src="assets/img/polo.jpg" alt="Polo maille Le Court" loading="lazy" /></div>
+        <div class="product__info"><div class="nm">Polo maille « Le Court »</div><div class="ct">Coton piqué · œil brodé fil d'or</div><div class="pr">79 €</div></div>
       </a>
 
       <a class="product reveal" data-cat="vetements" href="product.html">
-        <div class="product__media"><div class="product__ph"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M17 8l7 4 7-4 7 6-4 4v22H14V18l-4-4z"/><path d="M24 12v28"/></svg><span class="lbl">Chemise en lin</span><span class="tiny">Bientôt</span></div></div>
-        <div class="product__info"><div><div class="nm">Chemise en lin</div><div class="ct">Prochaine livraison</div></div><div class="pr">—</div></div>
+        <div class="product__media"><div class="product__ph"><svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M28 66 Q92 108 156 66"/><path d="M28 66 Q92 24 156 66 Q184 55 214 30"/><circle cx="92" cy="65" r="27"/><circle cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/><g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/></g></svg><span class="tiny">Édition — bientôt</span></div></div>
+        <div class="product__info"><div class="nm">Pull câblé « L'Héritier »</div><div class="ct">Maille torsadée · écusson ton sur ton</div><div class="pr">119 €</div></div>
       </a>
 
       <a class="product reveal" data-cat="vetements" href="product.html">
-        <div class="product__media"><div class="product__ph"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M16 8l8 5 8-5 6 6-5 5v21H15V19l-5-5z"/></svg><span class="lbl">Veste d'été</span><span class="tiny">Bientôt</span></div></div>
-        <div class="product__info"><div><div class="nm">Veste non doublée</div><div class="ct">Prochaine livraison</div></div><div class="pr">—</div></div>
+        <div class="product__media"><div class="product__ph"><svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M28 66 Q92 108 156 66"/><path d="M28 66 Q92 24 156 66 Q184 55 214 30"/><circle cx="92" cy="65" r="27"/><circle cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/><g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/></g></svg><span class="tiny">Édition — bientôt</span></div></div>
+        <div class="product__info"><div class="nm">Oxford « La Correspondance »</div><div class="ct">Col boutonné · devise brodée</div><div class="pr">89 €</div></div>
       </a>
 
       <a class="product reveal" data-cat="accessoires" href="product.html">
-        <div class="product__media"><div class="product__ph"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="27" r="11"/><path d="M24 16V9m-5 0h10"/></svg><span class="lbl">Chevalière</span><span class="tiny">Bientôt</span></div></div>
-        <div class="product__info"><div><div class="nm">Chevalière</div><div class="ct">Prochaine livraison</div></div><div class="pr">—</div></div>
+        <div class="product__media"><div class="product__ph"><svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M28 66 Q92 108 156 66"/><path d="M28 66 Q92 24 156 66 Q184 55 214 30"/><circle cx="92" cy="65" r="27"/><circle cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/><g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/></g></svg><span class="tiny">Édition — bientôt</span></div></div>
+        <div class="product__info"><div class="nm">Casquette « Le Club »</div><div class="ct">Coton lavé vert anglais · œil brodé</div><div class="pr">39 €</div></div>
       </a>
 
       <a class="product reveal" data-cat="accessoires" href="product.html">
-        <div class="product__media"><div class="product__ph"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 20h30v6H6z"/><rect x="36" y="18" width="6" height="10" rx="1.5"/></svg><span class="lbl">Ceinture</span><span class="tiny">Bientôt</span></div></div>
-        <div class="product__info"><div><div class="nm">Ceinture cuir</div><div class="ct">Prochaine livraison</div></div><div class="pr">—</div></div>
+        <div class="product__media"><div class="product__ph"><svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M28 66 Q92 108 156 66"/><path d="M28 66 Q92 24 156 66 Q184 55 214 30"/><circle cx="92" cy="65" r="27"/><circle cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/><g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/></g></svg><span class="tiny">Édition — bientôt</span></div></div>
+        <div class="product__info"><div class="nm">Foulard « Riviera »</div><div class="ct">Twill de soie · rameaux & yeux</div><div class="pr">59 €</div></div>
       </a>
 
     </div>
@@ -92,21 +85,24 @@
 
 <footer class="foot">
   <div class="wrap">
-    <div class="foot__big">House of AS</div>
-    <div class="foot__top">
-      <div><p class="blurb">La maison du vestiaire masculin. Vêtements, lunettes et maroquinerie d'exception — pensés pour durer, faits pour se transmettre.</p></div>
-      <div><h4>Boutique</h4><ul><li><a href="collection.html">Vestiaire</a></li><li><a href="collection.html">Lunettes</a></li><li><a href="collection.html">Maroquinerie</a></li><li><a href="collection.html">Sur-mesure</a></li></ul></div>
-      <div><h4>La Maison</h4><ul><li><a href="index.html#maison">Notre histoire</a></li><li><a href="index.html#maison">Matières</a></li><li><a href="index.html#categories">Catégories</a></li><li><a href="index.html#cercle">Le Cercle</a></li></ul></div>
-      <div><h4>Service</h4><ul><li><a href="#">Livraison & retours</a></li><li><a href="#">Guide des tailles</a></li><li><a href="#">Nous contacter</a></li><li><a href="#">Suivi de commande</a></li></ul></div>
+    <div class="foot__blason">
+      <svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M28 66 Q92 108 156 66"/><path d="M28 66 Q92 24 156 66 Q184 55 214 30"/><circle cx="92" cy="65" r="27"/><circle cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/><g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/><path d="M0 0 C3.4 -3 9 -3 12 0 C9 3 3.4 3 0 0Z" transform="translate(206,33) rotate(-40)"/></g></svg>
+      <div class="wm">The Eyes Chico</div>
+      <p class="latin">Oculi numquam mentiuntur · Est. MMXXVI</p>
     </div>
-    <div class="foot__bottom"><span>© <span data-year>2026</span> House of AS — Tous droits réservés.</span><span>New York · Paris · Livraison mondiale</span></div>
+    <div class="foot__top">
+      <div><h4>La Boutique</h4><ul><li><a href="collection.html">L'Édition N°1</a></li><li><a href="collection.html">Les Solaires</a></li><li><a href="collection.html">Le Vestiaire</a></li><li><a href="collection.html">Cartes cadeaux</a></li></ul></div>
+      <div><h4>La Maison</h4><ul><li><a href="index.html#maison">Le Concept</a></li><li><a href="index.html#maison">L'Histoire</a></li><li><a href="index.html#cercle">Le Cercle</a></li><li><a href="#">La Correspondance</a></li></ul></div>
+      <div><h4>Le Service</h4><ul><li><a href="#">Livraison & retours</a></li><li><a href="#">Guide des tailles</a></li><li><a href="#">Nous écrire</a></li><li><a href="#">Suivi de commande</a></li></ul></div>
+    </div>
+    <div class="foot__bottom"><span>© <span data-year>2026</span> The Eyes Chico — Tous droits réservés.</span><span>Le regard ne ment jamais.</span></div>
   </div>
 </footer>
 
 <div class="drawer-backdrop" data-close-cart></div>
 <aside class="drawer" aria-label="Panier">
   <div class="drawer__head"><h3>Votre panier</h3><button class="drawer__close" data-close-cart aria-label="Fermer">×</button></div>
-  <div class="drawer__empty"><p>Votre panier est encore vide.</p><a class="btn btn--ghost" href="collection.html" data-close-cart>Parcourir la boutique</a></div>
+  <div class="drawer__empty"><p class="latin">Votre panier vous regarde encore.</p><a class="btn btn--ghost" href="collection.html" data-close-cart>Parcourir l'Édition</a></div>
 </aside>
 
 <script>

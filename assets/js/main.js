@@ -1,20 +1,21 @@
 /* ============================================================
-   HOUSE OF AS — global UI
+   THE EYES CHICO — UI
    ============================================================ */
 (function () {
   "use strict";
 
-  /* ---- sticky nav state ---- */
+  /* ---- loader ---- */
+  var loader = document.querySelector(".loader");
+  window.addEventListener("load", function () {
+    setTimeout(function () { if (loader) loader.classList.add("is-done"); }, 350);
+  });
+  // safety: never trap the page
+  setTimeout(function () { if (loader) loader.classList.add("is-done"); }, 2200);
+
+  /* ---- sticky nav ---- */
   var nav = document.querySelector(".nav");
   if (nav) {
-    var solidAt = function () {
-      var hero = document.querySelector(".hero");
-      // become solid once we've scrolled roughly past first viewport
-      return hero ? Math.min(window.innerHeight * 0.85, hero.offsetHeight) : 40;
-    };
-    var onScroll = function () {
-      nav.classList.toggle("is-solid", window.scrollY > solidAt());
-    };
+    var onScroll = function () { nav.classList.toggle("is-solid", window.scrollY > Math.min(window.innerHeight * 0.7, 500)); };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
   }
@@ -23,24 +24,35 @@
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && reveals.length) {
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
-      });
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
     }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
     reveals.forEach(function (el) { io.observe(el); });
-  } else {
-    reveals.forEach(function (el) { el.classList.add("in"); });
+  } else { reveals.forEach(function (el) { el.classList.add("in"); }); }
+
+  /* ---- the gaze: pupils follow the cursor ---- */
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce) {
+    var pupils = document.querySelectorAll(".eye .pupil");
+    if (pupils.length) {
+      window.addEventListener("pointermove", function (e) {
+        var mx = e.clientX / window.innerWidth - 0.5;
+        var my = e.clientY / window.innerHeight - 0.5;
+        pupils.forEach(function (p) {
+          // amount in SVG user units (small, refined)
+          var amt = 5;
+          p.setAttribute("transform", "translate(" + (mx * amt).toFixed(2) + "," + (my * amt).toFixed(2) + ")");
+        });
+      }, { passive: true });
+    }
   }
 
   /* ---- cart drawer ---- */
   var drawer = document.querySelector(".drawer");
   var backdrop = document.querySelector(".drawer-backdrop");
-  var openers = document.querySelectorAll("[data-open-cart]");
-  var closers = document.querySelectorAll("[data-close-cart]");
   function openCart() { if (drawer) { drawer.classList.add("open"); backdrop.classList.add("open"); } }
   function closeCart() { if (drawer) { drawer.classList.remove("open"); backdrop.classList.remove("open"); } }
-  openers.forEach(function (b) { b.addEventListener("click", function (e) { e.preventDefault(); openCart(); }); });
-  closers.forEach(function (b) { b.addEventListener("click", closeCart); });
+  document.querySelectorAll("[data-open-cart]").forEach(function (b) { b.addEventListener("click", function (e) { e.preventDefault(); openCart(); }); });
+  document.querySelectorAll("[data-close-cart]").forEach(function (b) { b.addEventListener("click", closeCart); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeCart(); });
 
   /* ---- mobile menu ---- */
@@ -49,24 +61,23 @@
   if (burger && links) {
     burger.addEventListener("click", function () {
       var open = links.style.display === "flex";
-      links.style.display = open ? "" : "flex";
-      links.style.position = "absolute";
-      links.style.top = "100%"; links.style.left = "0"; links.style.right = "0";
-      links.style.flexDirection = "column";
-      links.style.gap = "1.2rem";
-      links.style.padding = "1.6rem var(--pad-x)";
-      links.style.background = "color-mix(in oklch, var(--stone-100) 96%, transparent)";
+      if (open) { links.style.display = ""; return; }
+      links.style.display = "flex";
+      links.style.position = "absolute"; links.style.top = "100%"; links.style.left = "0"; links.style.right = "0";
+      links.style.flexDirection = "column"; links.style.gap = "1.2rem"; links.style.padding = "1.6rem var(--pad-x)";
+      links.style.background = "color-mix(in srgb, var(--ivoire) 97%, transparent)";
       links.style.backdropFilter = "blur(14px)";
+      nav.classList.add("is-solid");
     });
   }
 
-  /* ---- newsletter (no backend; gentle confirm) ---- */
+  /* ---- newsletter ---- */
   var form = document.querySelector(".cercle form");
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var note = form.parentNode.querySelector(".note");
-      if (note) note.textContent = "Merci. Vous faites désormais partie du Cercle.";
+      if (note) note.textContent = "Bien reçu. Votre regard fait désormais partie du Cercle.";
       form.reset();
     });
   }

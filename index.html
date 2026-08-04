@@ -3,226 +3,200 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>House of AS — La maison du vestiaire masculin</title>
-<meta name="description" content="House of AS — maison de mode masculine. Vêtements, lunettes et maroquinerie d'exception. Poussez la porte." />
-<meta name="theme-color" content="#1c140f" />
+<title>The Eyes Chico — Le regard ne ment jamais</title>
+<meta name="description" content="The Eyes Chico — maison de mode masculine old money. Oculi numquam mentiuntur : les yeux ne mentent jamais. Édition N°1, Premier Regard." />
+<meta name="theme-color" content="#224233" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/style.css" />
-<link rel="preload" as="image" href="assets/media/hero-seq/frame_001.jpg" />
 </head>
 <body>
 
 <!-- LOADER -->
 <div class="loader" aria-hidden="true">
   <div class="loader__inner">
-    <div class="loader__brand">House of AS</div>
-    <div class="loader__track"><div class="loader__bar"></div></div>
-    <div class="loader__pct">0 %</div>
+    <svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path class="lid" d="M28 66 Q92 108 156 66"/><path class="lid" d="M28 66 Q92 24 156 66 Q184 55 214 30"/>
+      <circle class="iris" cx="92" cy="65" r="27"/><circle class="pupil" cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/>
+      <g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/><path d="M0 0 C3.4 -3 9 -3 12 0 C9 3 3.4 3 0 0Z" transform="translate(206,33) rotate(-40)"/></g>
+    </svg>
+    <div class="loader__wm">The Eyes Chico</div>
   </div>
 </div>
 
 <!-- NAV -->
 <header class="nav" id="top">
-  <a class="nav__brand" href="#top">House of AS</a>
+  <a class="nav__brand" href="#top" aria-label="The Eyes Chico — accueil">
+    <svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M28 66 Q92 108 156 66"/><path d="M28 66 Q92 24 156 66 Q184 55 214 30"/>
+      <circle cx="92" cy="65" r="27"/><circle class="pupil" cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/>
+      <g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/><path d="M0 0 C3.4 -3 9 -3 12 0 C9 3 3.4 3 0 0Z" transform="translate(206,33) rotate(-40)"/></g>
+    </svg>
+    <span class="wm">The Eyes Chico</span>
+  </a>
   <nav class="nav__links" aria-label="Principal">
-    <a class="link-underline" href="#vestiaire">Vestiaire</a>
-    <a class="link-underline" href="#categories">Catégories</a>
+    <a class="link-underline" href="#edition">L'Édition</a>
     <a class="link-underline" href="#maison">La Maison</a>
-    <a class="link-underline" href="#cercle">Contact</a>
+    <a class="link-underline" href="collection.html">Boutique</a>
+    <a class="link-underline" href="#cercle">Le Cercle</a>
   </nav>
   <div class="nav__right">
-    <a class="link-underline" href="collection.html">Boutique</a>
     <button class="nav__cart" data-open-cart aria-label="Ouvrir le panier">Panier <span class="count">0</span></button>
     <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<!-- HERO : push to the doors -->
-<section class="hero" id="hero" aria-label="Entrée dans la maison House of AS">
-  <div class="hero__stage">
-    <canvas class="hero__canvas"></canvas>
-    <div class="hero__scrim"></div>
-
-    <div class="hero__messages">
-      <div class="hero-msg hero-msg--top" data-range="0.05,0.24">
-        <span class="k">Maison — New York</span>
-        <h1 class="t">Le luxe ne se visite pas,<br><span class="serif-em">il se vit.</span></h1>
-      </div>
-      <div class="hero-msg hero-msg--bottom" data-range="0.42,0.66">
-        <h2 class="t">Poussez la porte.</h2>
-        <p class="s">Ce qui vous attend de l'autre côté n'a pas de prix affiché par hasard.</p>
-      </div>
-    </div>
-
-    <!-- doors open : oversized statement -->
-    <div class="hero-finale">
-      <div>
-        <p class="big">Bienvenue<span class="serif-em">chez House of AS</span></p>
-        <p class="sub">La nouvelle maison du vestiaire masculin</p>
-        <div class="cta"><a class="btn btn--light" href="#vestiaire">Entrer dans la boutique <span class="arrow">→</span></a></div>
-      </div>
-    </div>
-
-    <div class="hero__cue"><span>Défilez</span><span class="bar"></span></div>
+<!-- HERO -->
+<section class="hero" aria-label="The Eyes Chico">
+  <div class="hero__top">
+    <p class="eyebrow eyebrow--or">Maison fondée en MMXXVI</p>
   </div>
+  <div>
+    <div class="hero__emblem">
+      <svg class="eye eye--animated" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-label="Emblème de l'œil botanique">
+        <path class="lid" d="M28 66 Q92 108 156 66"/><path class="lid" d="M28 66 Q92 24 156 66 Q184 55 214 30"/>
+        <circle class="iris" cx="92" cy="65" r="27"/><circle class="pupil" cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/>
+        <g fill="currentColor" stroke="none"><path class="leaf" d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path class="leaf" d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path class="leaf" d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path class="leaf" d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path class="leaf" d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/><path class="leaf" d="M0 0 C3.4 -3 9 -3 12 0 C9 3 3.4 3 0 0Z" transform="translate(206,33) rotate(-40)"/></g>
+      </svg>
+    </div>
+    <h1>Le regard ne ment <em>jamais.</em></h1>
+    <p class="hero__latin latin">Oculi numquam mentiuntur</p>
+    <div class="hero__cta">
+      <a class="btn btn--solid" href="#edition">Découvrir l'Édition N°1 <span class="arrow">→</span></a>
+      <a class="btn btn--ghost" href="#maison">La Maison</a>
+    </div>
+  </div>
+  <div class="hero__cue"><span>Défilez</span><span class="bar"></span></div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__row">
-    <span>Maille italienne</span><span>Lin lavé</span><span>Maroquinerie d'exception</span><span>Lunettes façonnées main</span><span>Édition limitée</span>
-    <span>Maille italienne</span><span>Lin lavé</span><span>Maroquinerie d'exception</span><span>Lunettes façonnées main</span><span>Édition limitée</span>
-  </div>
+<!-- LATIN BAND -->
+<div class="band">
+  <p class="latin">« L'élégance ne s'achète pas. Elle se regarde. »</p>
+  <span class="tr">Manifeste de la Maison</span>
 </div>
 
-<!-- INTRO -->
-<section class="section intro" id="maison">
-  <div class="wrap intro__grid">
-    <p class="eyebrow reveal">[ La maison ]</p>
-    <h2 class="reveal" data-d="1">Une garde-robe d'<span class="serif-em">exception</span>, sans le tapage.</h2>
-    <div class="intro__foot">
-      <p class="lede reveal" data-d="2">House of AS habille l'homme qui sait. Des matières rares, des pièces choisies, une exigence qui ne se voit qu'à l'usage. Pas de logo criard — seulement le bon goût, porté.</p>
-      <a class="btn btn--ghost reveal" data-d="3" href="#vestiaire">Voir le vestiaire <span class="arrow">→</span></a>
+<!-- CONCEPT / MAISON -->
+<section class="section concept" id="maison">
+  <div class="wrap">
+    <p class="eyebrow reveal">Chapitre I — Le Concept</p>
+    <h2 class="display reveal" data-d="1">L'élégance de ceux qui n'ont rien à prouver — et <em>tout à transmettre.</em></h2>
+    <p class="lede reveal" data-d="2">The Eyes Chico habille l'homme au regard franc. On délaisse le clinquant pour l'allure old money : clubs de tennis sur terre battue, bibliothèques lambrissées, étés sur la Riviera. Des matières nobles, un vert anglais profond sur ivoire, un fil d'or qui ne brille jamais plus que nécessaire.</p>
+    <hr class="filet filet--or filet--center reveal" data-d="2" style="margin-top:2.6rem" />
+
+    <div class="piliers">
+      <div class="pilier reveal">
+        <p class="num">I</p><h3>La Franchise</h3>
+        <div class="filet filet--or"></div>
+        <p>Le regard franc de ceux qui n'ont rien à cacher. On peut mentir avec des mots, jamais avec un regard.</p>
+      </div>
+      <div class="pilier reveal" data-d="1">
+        <p class="num">II</p><h3>L'Héritage</h3>
+        <div class="filet filet--or"></div>
+        <p>Des pièces que l'on transmet plutôt qu'on ne jette. Certains héritent d'un nom ; d'autres, d'un regard.</p>
+      </div>
+      <div class="pilier reveal" data-d="2">
+        <p class="num">III</p><h3>La Discrétion</h3>
+        <div class="filet filet--or"></div>
+        <p>La vraie richesse ne hausse jamais la voix. Vue des initiés, invisible aux autres.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PRODUCTS -->
-<section class="section products" id="vestiaire">
+<!-- ÉDITION N°1 -->
+<section class="section edition" id="edition">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow reveal">[ Sélection ]</p>
-        <h2 class="display reveal" data-d="1">Le vestiaire</h2>
+        <p class="eyebrow eyebrow--or reveal">Édition N°1 — Premier Regard</p>
+        <h2 class="display reveal" data-d="1">La Collection inaugurale</h2>
       </div>
-      <p class="reveal" data-d="2">Quatre pièces inaugurales. Choisies pour se porter ensemble, pensées pour rester.</p>
+      <p class="reveal" data-d="2">Un vestiaire resserré, numéroté comme un tirage. Chaque pièce porte l'œil brodé au fil d'or ancien.</p>
     </div>
 
     <div class="product-grid">
       <a class="product reveal" href="product.html">
-        <div class="product__media"><span class="product__badge product__badge--terra">Signature</span><img src="assets/img/polo.jpg" alt="Polo en maille crème" loading="lazy" /></div>
-        <div class="product__info"><div><div class="nm">Polo en maille</div><div class="ct">Coton · Crème</div></div><div class="pr">180 €</div></div>
+        <div class="product__media"><span class="product__badge product__badge--or">Signature</span><img src="assets/img/sunglasses.jpg" alt="Solaires Le Regard — acétate fumé" loading="lazy" /></div>
+        <div class="product__info"><div class="nm">Les Solaires « Le Regard »</div><div class="ct">Acétate façonné · fumé brun</div><div class="pr">145 €</div></div>
       </a>
 
       <a class="product reveal" data-d="1" href="product.html">
-        <div class="product__media"><img src="assets/img/trousers.jpg" alt="Pantalon en lin brun foncé" loading="lazy" /></div>
-        <div class="product__info"><div><div class="nm">Pantalon en lin</div><div class="ct">Lin lavé · Espresso</div></div><div class="pr">210 €</div></div>
+        <div class="product__media"><span class="product__badge">Le Court</span><img src="assets/img/polo.jpg" alt="Polo maille Le Court, ivoire" loading="lazy" /></div>
+        <div class="product__info"><div class="nm">Polo maille « Le Court »</div><div class="ct">Coton piqué · œil brodé fil d'or</div><div class="pr">79 €</div></div>
       </a>
 
       <a class="product reveal" data-d="2" href="product.html">
-        <div class="product__media"><img src="assets/img/sunglasses.jpg" alt="Lunettes de soleil acétate dégradé" loading="lazy" /></div>
-        <div class="product__info"><div><div class="nm">Lunettes solaires</div><div class="ct">Acétate · Fumé brun</div></div><div class="pr">190 €</div></div>
-      </a>
-
-      <a class="product reveal" data-d="3" href="product.html">
-        <div class="product__media"><span class="product__badge">Pièce rare</span><img src="assets/img/wallet.jpg" alt="Porte-cartes en toile enduite" loading="lazy" /></div>
-        <div class="product__info"><div><div class="nm">Porte-cartes</div><div class="ct">Toile enduite · Marine</div></div><div class="pr">390 €</div></div>
-      </a>
-
-      <a class="product reveal" href="collection.html">
         <div class="product__media"><div class="product__ph">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M17 8l7 4 7-4 7 6-4 4v22H14V18l-4-4z"/><path d="M24 12v28"/></svg>
-          <span class="lbl">Chemise en lin</span><span class="tiny">Bientôt</span>
+          <svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M28 66 Q92 108 156 66"/><path d="M28 66 Q92 24 156 66 Q184 55 214 30"/><circle cx="92" cy="65" r="27"/><circle cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/><g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/></g></svg>
+          <span class="tiny">Édition — bientôt</span>
         </div></div>
-        <div class="product__info"><div><div class="nm">Chemise en lin</div><div class="ct">Prochaine livraison</div></div><div class="pr">—</div></div>
+        <div class="product__info"><div class="nm">Pull câblé « L'Héritier »</div><div class="ct">Maille torsadée · écusson ton sur ton</div><div class="pr">119 €</div></div>
       </a>
 
-      <a class="product reveal" data-d="1" href="collection.html">
+      <a class="product reveal" href="product.html">
         <div class="product__media"><div class="product__ph">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="27" r="11"/><path d="M24 16V9m-5 0h10"/></svg>
-          <span class="lbl">Chevalière</span><span class="tiny">Bientôt</span>
+          <svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M28 66 Q92 108 156 66"/><path d="M28 66 Q92 24 156 66 Q184 55 214 30"/><circle cx="92" cy="65" r="27"/><circle cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/><g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/></g></svg>
+          <span class="tiny">Édition — bientôt</span>
         </div></div>
-        <div class="product__info"><div><div class="nm">Chevalière</div><div class="ct">Prochaine livraison</div></div><div class="pr">—</div></div>
+        <div class="product__info"><div class="nm">Oxford « La Correspondance »</div><div class="ct">Col boutonné · devise latine brodée</div><div class="pr">89 €</div></div>
+      </a>
+
+      <a class="product reveal" data-d="1" href="product.html">
+        <div class="product__media"><div class="product__ph">
+          <svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M28 66 Q92 108 156 66"/><path d="M28 66 Q92 24 156 66 Q184 55 214 30"/><circle cx="92" cy="65" r="27"/><circle cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/><g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/></g></svg>
+          <span class="tiny">Édition — bientôt</span>
+        </div></div>
+        <div class="product__info"><div class="nm">Casquette « Le Club »</div><div class="ct">Coton lavé vert anglais · œil brodé</div><div class="pr">39 €</div></div>
+      </a>
+
+      <a class="product reveal" data-d="2" href="product.html">
+        <div class="product__media"><div class="product__ph">
+          <svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M28 66 Q92 108 156 66"/><path d="M28 66 Q92 24 156 66 Q184 55 214 30"/><circle cx="92" cy="65" r="27"/><circle cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/><g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/></g></svg>
+          <span class="tiny">Édition — bientôt</span>
+        </div></div>
+        <div class="product__info"><div class="nm">Foulard « Riviera »</div><div class="ct">Twill de soie · motif rameaux & yeux</div><div class="pr">59 €</div></div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- FEATURE full-bleed : storefront -->
-<section class="feature">
-  <img src="assets/img/storefront.jpg" alt="Devanture de la boutique House of AS à New York" loading="lazy" />
-  <div class="feature__body reveal">
-    <p class="eyebrow" style="color:var(--camel)">[ L'adresse ]</p>
-    <h2 class="display">Une maison,<br><span class="serif-em">pas une boutique.</span></h2>
-    <p>Derrière la façade de pierre, un écrin de bois et de cuir où chaque pièce est présentée comme elle mérite de l'être. La même attention, en ligne.</p>
-    <a class="btn btn--light" href="#categories">Découvrir les catégories <span class="arrow">→</span></a>
-  </div>
-</section>
-
-<!-- CATEGORIES bento -->
-<section class="section bento" id="categories">
+<!-- QUOTE -->
+<section class="section quote">
   <div class="wrap">
-    <div class="section-head">
-      <div><p class="eyebrow reveal">[ Catégories ]</p><h2 class="display reveal" data-d="1">Explorer</h2></div>
-      <p class="reveal" data-d="2">Du prêt-à-porter aux pièces de maroquinerie, tout le vestiaire en un regard.</p>
-    </div>
-    <div class="bento-grid reveal">
-      <a class="cat cat--a" href="collection.html">
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 8l7 4 7-4 7 6-4 4v22H14V18l-4-4z"/></svg>
-        <div class="name">Prêt-à-porter</div><div class="more">Polos · Pantalons · Chemises →</div>
-      </a>
-      <a class="cat cat--b" href="collection.html">
-        <svg class="ico" viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="13" r="7"/><circle cx="36" cy="13" r="7"/><path d="M19 12h10M2 10l3-2M46 10l-3-2"/></svg>
-        <div class="name">Lunettes</div><div class="more">Solaires & optiques →</div>
-      </a>
-      <a class="cat cat--c" href="collection.html">
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="9" y="15" width="30" height="20" rx="3"/><path d="M9 21h30M29 26h6"/><path d="M13 15v-3a3 3 0 0 1 3-3h17"/></svg>
-        <div class="name">Maroquinerie</div><div class="more">Porte-cartes · Portefeuilles →</div>
-      </a>
-      <a class="cat cat--d" href="collection.html">
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="24" cy="27" r="11"/><path d="M24 16V9m-5 0h10"/></svg>
-        <div class="name">Bijoux</div><div class="more">Argent & or →</div>
-      </a>
-      <a class="cat cat--e" href="collection.html">
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M10 24h28M24 10v28" /><circle cx="24" cy="24" r="15"/></svg>
-        <div class="name">Sur-mesure</div><div class="more">Sur rendez-vous →</div>
-      </a>
-    </div>
+    <p class="mark">« Certains héritent d'un nom.<br><em>D'autres d'un regard.</em> »</p>
+    <p class="by">Campagne de lancement — MMXXVI</p>
   </div>
 </section>
 
-<!-- VALUES -->
-<section class="section values">
-  <div class="wrap">
-    <p class="eyebrow reveal" style="color:var(--camel)">[ Notre exigence ]</p>
-    <h2 class="display reveal" data-d="1" style="font-size:clamp(2rem,5vw,3.6rem);max-width:18ch;margin-top:1rem">Trois promesses, tenues à chaque commande.</h2>
-    <div class="values-grid">
-      <div class="value reveal"><span class="n">01</span><h3>Matières rares</h3><p>Maille italienne, lin lavé, toiles enduites et acétates façonnés. On choisit la matière avant le prix.</p></div>
-      <div class="value reveal" data-d="1"><span class="n">02</span><h3>Séries courtes</h3><p>Peu de pièces, jamais rééditées à l'identique. Ce que vous portez, peu de monde le porte.</p></div>
-      <div class="value reveal" data-d="2"><span class="n">03</span><h3>Service de maison</h3><p>Livraison soignée, retours simples, conseil personnel. L'attention d'une boutique, partout.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
+<!-- LE CERCLE -->
 <section class="section cercle" id="cercle">
   <div class="wrap">
-    <p class="eyebrow reveal">[ Sur invitation ]</p>
-    <h2 class="display reveal" data-d="1">Entrez dans <span class="serif-em">le cercle.</span></h2>
-    <p class="reveal" data-d="2">Accès anticipé aux pièces, éditions confidentielles et invitations privées. Deux fois par mois, jamais plus.</p>
+    <p class="eyebrow reveal">Sur invitation</p>
+    <h2 class="display reveal" data-d="1">Entrez dans <em>le Cercle.</em></h2>
+    <p class="reveal" data-d="2">La Correspondance de la Maison : accès anticipé aux Éditions numérotées, pièces confidentielles et invitations privées. Deux fois par mois, jamais plus.</p>
     <form class="reveal" data-d="3" novalidate>
       <input type="email" inputmode="email" placeholder="Votre adresse e-mail" aria-label="Adresse e-mail" required />
-      <button class="btn btn--light" type="submit">Rejoindre <span class="arrow">→</span></button>
+      <button class="btn btn--or" type="submit">Rejoindre <span class="arrow">→</span></button>
     </form>
-    <p class="note">Pas de spam. Désinscription en un clic.</p>
+    <p class="note">« Bien reçu. Votre commande est entre de bonnes mains — elle vous regarde déjà. »</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="foot">
   <div class="wrap">
-    <div class="foot__big">House of AS</div>
-    <div class="foot__top">
-      <div>
-        <p class="blurb">La maison du vestiaire masculin. Vêtements, lunettes et maroquinerie d'exception — pensés pour durer, faits pour se transmettre.</p>
-      </div>
-      <div><h4>Boutique</h4><ul><li><a href="collection.html">Vestiaire</a></li><li><a href="collection.html">Lunettes</a></li><li><a href="collection.html">Maroquinerie</a></li><li><a href="collection.html">Sur-mesure</a></li></ul></div>
-      <div><h4>La Maison</h4><ul><li><a href="#maison">Notre histoire</a></li><li><a href="#maison">Matières</a></li><li><a href="#categories">Catégories</a></li><li><a href="#cercle">Le Cercle</a></li></ul></div>
-      <div><h4>Service</h4><ul><li><a href="#">Livraison & retours</a></li><li><a href="#">Guide des tailles</a></li><li><a href="#">Nous contacter</a></li><li><a href="#">Suivi de commande</a></li></ul></div>
+    <div class="foot__blason">
+      <svg class="eye" viewBox="0 0 240 130" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M28 66 Q92 108 156 66"/><path d="M28 66 Q92 24 156 66 Q184 55 214 30"/><circle cx="92" cy="65" r="27"/><circle cx="92" cy="65" r="8.5" fill="#A98A52" stroke="none"/><g fill="currentColor" stroke="none"><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(166,60) rotate(-12)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(173,56) rotate(-64)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(183,50) rotate(-14)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(190,45) rotate(-66)"/><path d="M0 0 C4 -3.4 11 -3.4 15 0 C11 3.4 4 3.4 0 0Z" transform="translate(200,39) rotate(-16)"/><path d="M0 0 C3.4 -3 9 -3 12 0 C9 3 3.4 3 0 0Z" transform="translate(206,33) rotate(-40)"/></g></svg>
+      <div class="wm">The Eyes Chico</div>
+      <p class="latin">Oculi numquam mentiuntur · Est. MMXXVI</p>
     </div>
-    <div class="foot__bottom"><span>© <span data-year>2026</span> House of AS — Tous droits réservés.</span><span>New York · Paris · Livraison mondiale</span></div>
+    <div class="foot__top">
+      <div><h4>La Boutique</h4><ul><li><a href="collection.html">L'Édition N°1</a></li><li><a href="collection.html">Les Solaires</a></li><li><a href="collection.html">Le Vestiaire</a></li><li><a href="collection.html">Cartes cadeaux</a></li></ul></div>
+      <div><h4>La Maison</h4><ul><li><a href="#maison">Le Concept</a></li><li><a href="#maison">L'Histoire</a></li><li><a href="#cercle">Le Cercle</a></li><li><a href="#">La Correspondance</a></li></ul></div>
+      <div><h4>Le Service</h4><ul><li><a href="#">Livraison & retours</a></li><li><a href="#">Guide des tailles</a></li><li><a href="#">Nous écrire</a></li><li><a href="#">Suivi de commande</a></li></ul></div>
+    </div>
+    <div class="foot__bottom"><span>© <span data-year>2026</span> The Eyes Chico — Tous droits réservés.</span><span>Le regard ne ment jamais.</span></div>
   </div>
 </footer>
 
@@ -230,12 +204,9 @@
 <div class="drawer-backdrop" data-close-cart></div>
 <aside class="drawer" aria-label="Panier">
   <div class="drawer__head"><h3>Votre panier</h3><button class="drawer__close" data-close-cart aria-label="Fermer">×</button></div>
-  <div class="drawer__empty"><p>Votre panier est encore vide.</p><a class="btn btn--ghost" href="collection.html" data-close-cart>Parcourir la boutique</a></div>
+  <div class="drawer__empty"><p class="latin">Votre panier vous regarde encore.</p><a class="btn btn--ghost" href="collection.html" data-close-cart>Parcourir l'Édition</a></div>
 </aside>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="assets/js/hero-scroll.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,54 +1,50 @@
-# House of AS
+# The Eyes Chico
 
-Maison de mode masculine — vêtements, lunettes et maroquinerie d'exception.
-Direction artistique **terre / brun chaud**, style moderne et éditorial.
+Maison de mode masculine old money. **« Le regard ne ment jamais »** —
+_Oculi numquam mentiuntur_. Identité, palette et univers issus du brand book
+« Édition Old Money ».
 
-## La landing page
+## Identité
 
-La page d'accueil ouvre sur un **hero cinématographique piloté au défilement** :
-une séquence d'images (extraite de la vidéo) qui **avance vers la boutique** et,
-en fin de défilement, **les portes s'ouvrent** sur un texte géant de bienvenue.
-
-- Rendu via `<canvas>` plein cadre (`cover`) + séquence d'images préchargées.
-- **Filtre sombre** (scrim dégradé + vignette) pour tamiser la scène.
-- Messages éditoriaux en fondu, puis **statement géant à l'ouverture des portes**.
-- Animation au scroll avec **GSAP ScrollTrigger**, **fallback scroll natif**.
-- Respecte `prefers-reduced-motion` (composition statique de repli).
+- **Logo** — « L'Œil botanique » (Concept A du brand book) : œil en amande,
+  iris cerclé, pupille point d'or, paupière prolongée en rameau d'olivier.
+  Dessiné en **SVG** (net à toute taille), inline dans le site. Sur la page
+  d'accueil, la pupille suit le regard du visiteur et le rameau se dessine au
+  chargement.
+- **Palette** — Ivoire papier `#F4EFE3` · Vert anglais `#224233` ·
+  Encre sépia `#3A3128` · Or ancien `#A98A52` · Bordeaux héritage `#6E3B34`.
+  Dominante beige / marron old money, vert anglais en signature, or en fil.
+- **Typographie** — Cormorant Garamond (titres & logotype) + EB Garamond
+  (textes & italiques). Capitales espacées, filets doubles, or jamais criard.
 
 ## Structure
 
 ```
-index.html        Landing — hero d'habillage au scroll + sections (manifeste,
-                  vêtements, éditorial, accessoires, Le Cercle, footer)
-collection.html   Boutique — grille de produits filtrable (vêtements / accessoires)
-product.html      Fiche produit — galerie, couleurs, tailles, panier, accordéons
+index.html        Accueil — emblème animé, manifeste & 3 piliers,
+                  Édition N°1, citation, Le Cercle, footer blason
+collection.html   La Boutique — Édition N°1, grille filtrable
+product.html      Fiche produit — Les Solaires « Le Regard »
 assets/
-  css/style.css       Design system (thème gris, tokens OKLCH, typographie)
-  js/hero-scroll.js   Moteur du hero (canvas + séquence + messages)
-  js/main.js          Nav, reveals au scroll, panier, newsletter
-  media/hero-seq/     161 frames de la séquence (avancée vers les portes)
-  img/                Photos produits + plans éditoriaux (devanture, intérieur)
+  css/style.css   Design system (charte The Eyes Chico)
+  js/main.js      Nav, reveals, « le regard » (pupille), panier, Cercle
+  img/            Photos produits (polo, solaires)
 ```
+
+## Collection inaugurale — Édition N°1 « Premier Regard »
+
+Les Solaires « Le Regard » · Polo maille « Le Court » · Pull « L'Héritier » ·
+Oxford « La Correspondance » · Casquette « Le Club » · Foulard « Riviera ».
 
 ## Lancer en local
 
 ```bash
-python3 -m http.server 8000
-# puis ouvrir http://localhost:8000
+python3 -m http.server 8000   # puis http://localhost:8000
 ```
 
-> Polices (Cormorant Garamond + Jost) et GSAP sont chargés via CDN ; une connexion
-> est nécessaire pour le rendu typographique et le scrub d'animation complet.
-
-## Direction artistique
-
-- **Palette** : terre / brun chaud — sable, camel, terracotta, espresso, crème.
-- **Typographie** : Archivo (grotesk display) + Inter (UI) + Instrument Serif (accents).
-- **Ton** : maison de mode moderne — matières rares, séries courtes, sans tapage.
+> Les polices (Cormorant Garamond + EB Garamond) sont chargées via CDN.
 
 ## Pistes d'évolution
 
-- Portage en thème **Shopify** (Liquid) : le hero canvas et les sections sont
-  réutilisables tels quels dans un `section` Shopify.
-- Photographie produit dédiée pour les accessoires (actuellement icônes de ligne).
-- Panier réel + checkout (Shopify Storefront API ou checkout natif).
+- Portage **Shopify** (Liquid) — l'emblème et les sections sont réutilisables.
+- Photographie produit dédiée pour les pièces « bientôt ».
+- Panier / checkout réel (Shopify Storefront API).
